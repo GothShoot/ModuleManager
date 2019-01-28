@@ -1,0 +1,17 @@
+{
+    "name": "alzundaz/NitroPHP",
+    "description": "Heart of NitroPHP",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "GothShoot",
+            "email": "romuald.mocq@yahoo.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "czproject/git-php": "^3.16"
+    }
+}
