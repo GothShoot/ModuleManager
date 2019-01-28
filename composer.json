@@ -1,6 +1,6 @@
 {
-    "name": "alzundaz/NitroPHP",
-    "description": "Heart of NitroPHP",
+    "name": "alzundaz/module-manager",
+    "description": "Module manager for NitroPHP",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",
