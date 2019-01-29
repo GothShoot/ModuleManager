@@ -4,6 +4,7 @@ namespace Alzundaz\ModuleManager\Services;
 
 use Alzundaz\NitroPHP\Services\ConfigHandler;
 use Alzundaz\NitroPHP\BaseClass\Singleton;
+use Alzundaz\NitroPHP\Services\ConfigGenerator;
 
 
 class ModuleManager extends Singleton
@@ -26,6 +27,7 @@ class ModuleManager extends Singleton
     public function listInstalledModule():void
     {
         $configHandler = ConfigHandler::getInstance();
+        if( !file_exists(ROOT_DIR.'/Config/module.json') ) ConfigGenerator::getInstance()->generateConfig(__DIR__.'/../Config/', 'module.json', ROOT_DIR.'/Config/module.json');
         $modules = $configHandler->loadJsonConfig(ROOT_DIR.'/Config/', 'module.json');
         $raw_files = scandir( ROOT_DIR.'/Module/' );
         foreach($raw_files as $file){
