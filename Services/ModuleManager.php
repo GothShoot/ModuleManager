@@ -36,9 +36,10 @@ class ModuleManager extends Singleton
                 if ( !array_key_exists($file, $modules) ){
                     $data['enabled'] = false;
                     $data['path'] = 'Module/'.$file;
-                    $modules[$file] = [];
-                }
-                array_replace($modules[$file], $data);
+					$modules[$file] = $data;
+                } else {
+					array_replace($modules[$file], $data);
+				}
             }
         }
         $configHandler->setConfig(ROOT_DIR.'/Config/module.json', $modules);
