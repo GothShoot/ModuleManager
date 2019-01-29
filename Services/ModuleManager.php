@@ -8,7 +8,7 @@ use Alzundaz\NitroPHP\BaseClass\Singleton;
 
 class ModuleManager extends Singleton
 {
-    public function loadModule()
+    public function createModule()
     {
 
     }
@@ -23,7 +23,7 @@ class ModuleManager extends Singleton
      *
      * @return void
      */
-    private function listInstalledModule():void
+    public function listInstalledModule():void
     {
         $configHandler = ConfigHandler::getInstance();
         $modules = $configHandler->loadJsonConfig(ROOT_DIR.'/Config/', 'module.json');
