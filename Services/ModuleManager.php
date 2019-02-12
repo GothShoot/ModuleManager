@@ -39,7 +39,8 @@ class ModuleManager extends Singleton
 					$modules[$file] = $data;
                 } else {
 					array_replace($modules[$file], $data);
-				}
+                }
+                ksort($modules[$file]);
             }
         }
         $configHandler->setConfig(ROOT_DIR.'/Config/module.json', $modules);
